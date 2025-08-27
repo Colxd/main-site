@@ -556,6 +556,9 @@ confirmationStyle.textContent = `
              this.style.transform = 'scale(1)';
          }, 150);
          
+         // Redirect to Shroom Uploads
+         window.open('https://shroomuploads.online/?share=7mjwbsa1ov', '_blank');
+         
          // Show download confirmation
          showDownloadConfirmation('Shroom External');
          
@@ -609,131 +612,22 @@ function initStatusIndicator() {
     setInterval(fetchStatus, 30000);
 }
 
-// Initialize Human Verification
+// Initialize Human Verification (Disabled for now)
 function initHumanVerification() {
+    // Hide loading screen immediately
     const loadingScreen = document.getElementById('loadingScreen');
-    const verificationModal = document.getElementById('verificationModal');
-    const verifyBtn = document.getElementById('verifyBtn');
-    const refreshBtn = document.getElementById('refreshBtn');
-    const answerInput = document.getElementById('answerInput');
-    const num1Span = document.getElementById('num1');
-    const num2Span = document.getElementById('num2');
-    const operatorSpan = document.getElementById('operator');
-    
-    let currentAnswer = 0;
-    
-    // Show loading screen first
-    loadingScreen.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    
-    // After 3 seconds, hide loading and show verification
-    setTimeout(() => {
+    if (loadingScreen) {
         loadingScreen.style.display = 'none';
-        verificationModal.style.display = 'flex';
-    }, 3000);
-    
-    // Generate new math problem
-    function generateMathProblem() {
-        const num1 = Math.floor(Math.random() * 20) + 1;
-        const num2 = Math.floor(Math.random() * 20) + 1;
-        const operators = ['+', '-', '×'];
-        const operator = operators[Math.floor(Math.random() * operators.length)];
-        
-        // Calculate answer
-        switch(operator) {
-            case '+':
-                currentAnswer = num1 + num2;
-                break;
-            case '-':
-                currentAnswer = num1 - num2;
-                break;
-            case '×':
-                currentAnswer = num1 * num2;
-                break;
-        }
-        
-        // Update display
-        num1Span.textContent = num1;
-        num2Span.textContent = num2;
-        operatorSpan.textContent = operator;
-        
-        // Clear input
-        answerInput.value = '';
-        answerInput.focus();
     }
     
-    // Generate first problem
-    generateMathProblem();
-    
-    // Handle verification
-    verifyBtn.addEventListener('click', function() {
-        const userAnswer = parseInt(answerInput.value);
-        
-        if (userAnswer === currentAnswer) {
-            // Verification successful
-            verificationModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            
-            // Show success message
-            showVerificationSuccess();
-        } else {
-            // Verification failed
-            showVerificationError();
-            generateMathProblem();
-        }
-    });
-    
-    // Handle refresh
-    refreshBtn.addEventListener('click', function() {
-        generateMathProblem();
-    });
-    
-    // Handle Enter key
-    answerInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            verifyBtn.click();
-        }
-    });
-    
-    function showVerificationSuccess() {
-        const successMsg = document.createElement('div');
-        successMsg.className = 'verification-success';
-        successMsg.innerHTML = `
-            <div class="success-content">
-                <i class="fas fa-check-circle"></i>
-                <h3>Verification Successful!</h3>
-                <p>Welcome to Shroom External</p>
-            </div>
-        `;
-        
-        document.body.appendChild(successMsg);
-        
-        setTimeout(() => {
-            if (successMsg.parentNode) {
-                successMsg.parentNode.removeChild(successMsg);
-            }
-        }, 3000);
+    // Hide verification modal immediately
+    const verificationModal = document.getElementById('verificationModal');
+    if (verificationModal) {
+        verificationModal.style.display = 'none';
     }
     
-    function showVerificationError() {
-        const errorMsg = document.createElement('div');
-        errorMsg.className = 'verification-error';
-        errorMsg.innerHTML = `
-            <div class="error-content">
-                <i class="fas fa-times-circle"></i>
-                <h3>Verification Failed</h3>
-                <p>Please try again</p>
-            </div>
-        `;
-        
-        document.body.appendChild(errorMsg);
-        
-        setTimeout(() => {
-            if (errorMsg.parentNode) {
-                errorMsg.parentNode.removeChild(errorMsg);
-            }
-        }, 3000);
-    }
+    // Ensure body overflow is auto for immediate access
+    document.body.style.overflow = 'auto';
 }
 
 // Initialize AI Assistant
