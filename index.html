@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shroom External - Premium Roblox External Cheat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="logo-container">
+                <img src="https://cdn.discordapp.com/attachments/1265508598008512545/1410120008238895154/shroom.png?ex=68afdc18&is=68ae8a98&hm=db8b2d4e3a17c8f67753ce2f8467d36d1aae560dab001e6ae59ec90496426a77&" alt="Shroom Logo" class="loading-logo" id="loadingLogo">
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loadingBar"></div>
+                <div class="loading-text">Amount of Growth</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Human Verification Modal -->
+    <div class="verification-modal" id="verificationModal">
+        <div class="verification-content">
+            <div class="verification-header">
+                <h2><i class="fas fa-shield-alt"></i> Human Verification Required</h2>
+                <p>Please complete the verification to access Shroom External</p>
+            </div>
+            
+            <div class="verification-body">
+                <div class="math-container">
+                    <div class="math-problem">
+                        <h3>Solve the Math Problem</h3>
+                        <div class="problem-display" id="problemDisplay">
+                            <span id="num1">5</span>
+                            <span id="operator">+</span>
+                            <span id="num2">3</span>
+                            <span>=</span>
+                            <span>?</span>
+                        </div>
+                    </div>
+                    <div class="math-instructions">
+                        <p>Enter the correct answer below</p>
+                        <div class="answer-input">
+                            <input type="number" id="answerInput" placeholder="Enter answer" min="0" max="100">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="verification-actions">
+                    <button class="btn btn-primary" id="verifyBtn">
+                        <i class="fas fa-check"></i>
+                        Verify
+                    </button>
+                    <button class="btn btn-secondary" id="refreshBtn">
+                        <i class="fas fa-redo"></i>
+                        Refresh
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://cdn.discordapp.com/attachments/1265508598008512545/1410120008238895154/shroom.png?ex=68afdc18&is=68ae8a98&hm=db8b2d4e3a17c8f67753ce2f8467d36d1aae560dab001e6ae59ec90496426a77&" alt="Shroom External" class="logo-img">
+                <span class="logo-text">Shroom External</span>
+            </div>
+
+                         <div class="nav-social">
+                 <a href="https://discord.gg/pCV7SnRB9U" class="social-link" target="_blank"><i class="fab fa-discord"></i></a>
+                 <a href="https://www.youtube.com/@getshrooms" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+             </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Animated Particles Background -->
+        <div class="particles-container">
+            <div class="particle" style="--delay: 0s; --x: 10%; --y: 20%;"></div>
+            <div class="particle" style="--delay: 2s; --x: 20%; --y: 60%;"></div>
+            <div class="particle" style="--delay: 4s; --x: 30%; --y: 40%;"></div>
+            <div class="particle" style="--delay: 6s; --x: 40%; --y: 80%;"></div>
+            <div class="particle" style="--delay: 8s; --x: 50%; --y: 30%;"></div>
+            <div class="particle" style="--delay: 10s; --x: 60%; --y: 70%;"></div>
+            <div class="particle" style="--delay: 12s; --x: 70%; --y: 50%;"></div>
+            <div class="particle" style="--delay: 14s; --x: 80%; --y: 25%;"></div>
+            <div class="particle" style="--delay: 16s; --x: 90%; --y: 75%;"></div>
+            <div class="particle" style="--delay: 18s; --x: 15%; --y: 85%;"></div>
+            <div class="particle" style="--delay: 20s; --x: 25%; --y: 15%;"></div>
+            <div class="particle" style="--delay: 22s; --x: 35%; --y: 65%;"></div>
+            <div class="particle" style="--delay: 24s; --x: 45%; --y: 35%;"></div>
+            <div class="particle" style="--delay: 26s; --x: 55%; --y: 85%;"></div>
+            <div class="particle" style="--delay: 28s; --x: 65%; --y: 45%;"></div>
+            <div class="particle" style="--delay: 30s; --x: 75%; --y: 15%;"></div>
+            <div class="particle" style="--delay: 32s; --x: 85%; --y: 55%;"></div>
+            <div class="particle" style="--delay: 34s; --x: 95%; --y: 25%;"></div>
+            <div class="particle" style="--delay: 36s; --x: 5%; --y: 75%;"></div>
+            <div class="particle" style="--delay: 38s; --x: 95%; --y: 85%;"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+
+                <h1 class="hero-title">
+                    <span class="title-main">Shroom External</span>
+                    <span class="title-sub">Premium Roblox External Cheat</span>
+                </h1>
+                <p class="hero-description">
+                    Experience the ultimate Roblox gaming advantage with our cutting-edge external cheat. 
+                    Undetected, powerful, and designed for the elite.
+                </p>
+                                 <div class="hero-buttons">
+                     <button class="btn btn-primary download-trigger">
+                         <i class="fas fa-download"></i>
+                         Download
+                     </button>
+                 </div>
+            </div>
+            <div class="hero-visual">
+                <div class="cheat-interface">
+                    <img src="shroom-cheat-ui.png" alt="Shroom External Cheat Interface" class="cheat-screenshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="showcase">
+        <div class="container">
+            <h2 class="section-title">See Shroom External in Action</h2>
+            <p class="section-subtitle">Watch our cheat dominate the competition</p>
+            <div class="showcase-grid">
+                                 <div class="video-box" data-aos="fade-up">
+                     <div class="video-container">
+                         <iframe 
+                             src="https://www.youtube.com/embed/jo41VeGVBmE?controls=0&modestbranding=1&rel=0&showinfo=0&mute=1&autoplay=0" 
+                             title="Shroom External Demo 1"
+                             frameborder="0" 
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                             allowfullscreen
+                             data-video-id="jo41VeGVBmE">
+                         </iframe>
+                     </div>
+                 </div>
+                 <div class="video-box" data-aos="fade-up" data-aos-delay="100">
+                     <div class="video-container">
+                         <iframe 
+                             src="https://www.youtube.com/embed/pdIWIQV7l34?controls=0&modestbranding=1&rel=0&showinfo=0&mute=1&autoplay=0" 
+                             title="Shroom External Demo 2"
+                             frameborder="0" 
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                             allowfullscreen
+                             data-video-id="pdIWIQV7l34">
+                         </iframe>
+                     </div>
+                 </div>
+                 <div class="video-box" data-aos="fade-up" data-aos-delay="200">
+                     <div class="video-container">
+                         <iframe 
+                             src="https://www.youtube.com/embed/1-O8D5oYiUg?controls=0&modestbranding=1&rel=0&showinfo=0&mute=1&autoplay=0" 
+                             title="Shroom External Demo 3"
+                             frameborder="0" 
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                             allowfullscreen
+                             data-video-id="1-O8D5oYiUg">
+                         </iframe>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Shroom External?</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Undetected</h3>
+                    <p>Advanced anti-detection systems ensure your account stays safe while using our cheat.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3>Aimbot</h3>
+                    <p>Advanced aim assistance with customizable FOV, smoothness, and target prioritization for precise shots.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>ESP/Wallhacks</h3>
+                    <p>See through walls with player ESP, item ESP, and customizable visibility options for tactical advantage.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Trigger Bot</h3>
+                    <p>Automatic shooting when crosshair is on target with adjustable delay and sensitivity settings.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Auto Updates</h3>
+                    <p>Automatic updates ensure you always have the latest features and security patches.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>Join our exclusive Discord community for support, updates, and cheat discussions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Banner -->
+    <div class="animated-banner">
+        <div class="banner-content">
+            <span class="banner-text">Get Shroom!</span>
+            <span class="banner-text">Get Shroom!</span>
+            <span class="banner-text">Get Shroom!</span>
+            <span class="banner-text">Get Shroom!</span>
+            <span class="banner-text">Get Shroom!</span>
+            <span class="banner-text">Get Shroom!</span>
+            <span class="banner-text">Get Shroom!</span>
+            <span class="banner-text">Get Shroom!</span>
+        </div>
+    </div>
+
+         <!-- AI Assistant Chat -->
+         <div class="ai-assistant" id="aiAssistant">
+             <div class="assistant-header">
+                 <div class="assistant-info">
+                     <img src="https://cdn.discordapp.com/attachments/1265508598008512545/1410120008238895154/shroom.png?ex=68afdc18&is=68ae8a98&hm=db8b2d4e3a17c8f67753ce2f8467d36d1aae560dab001e6ae59ec90496426a77&" alt="Shroom Himself" class="assistant-avatar">
+                     <div class="assistant-details">
+                         <h3>Shroom Himself</h3>
+                         <span class="status">Online</span>
+                     </div>
+                 </div>
+                 <button class="minimize-btn" id="minimizeBtn">
+                     <i class="fas fa-minus"></i>
+                 </button>
+             </div>
+             
+             <div class="chat-container" id="chatContainer">
+                 <div class="chat-messages" id="chatMessages">
+                     <div class="message assistant-message">
+                         <div class="message-content">
+                             <p>Hey there! I'm Shroom Himself, your AI assistant. I can help you with:</p>
+                             <ul>
+                                 <li>📥 Download instructions</li>
+                                 <li>🔗 Community access</li>
+                                 <li>❓ General questions</li>
+                             </ul>
+                             <p>What would you like to know?</p>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class="chat-input-container">
+                     <input type="text" id="chatInput" placeholder="Ask me anything..." maxlength="200">
+                     <button class="send-btn" id="sendBtn">
+                         <i class="fas fa-paper-plane"></i>
+                     </button>
+                 </div>
+             </div>
+             
+             <button class="assistant-toggle" id="assistantToggle">
+                 <i class="fas fa-comments"></i>
+                 <span>Shroom Himself</span>
+             </button>
+         </div>
+
+         <!-- Download Panel -->
+     <div class="download-panel" id="downloadPanel">
+         <div class="download-panel-content">
+             <div class="download-panel-header">
+                 <h2><i class="fas fa-download"></i> Download Shroom External</h2>
+                 <button class="close-panel" id="closePanel">&times;</button>
+             </div>
+             
+             <div class="download-info">
+                 <div class="version-info">
+                     <h3>Latest Version</h3>
+                     <div class="version-badge">
+                         <span class="version-number">v2.1.4</span>
+                         <span class="version-date">Updated: Today</span>
+                     </div>
+                 </div>
+                 
+                 <div class="roblox-version">
+                     <h3>Roblox Version</h3>
+                     <div class="roblox-badge">
+                         <span class="roblox-version-number">v0.2.1.0.0</span>
+                         <span class="roblox-version-date">Latest</span>
+                     </div>
+                 </div>
+             </div>
+             
+             <div class="updates-section">
+                 <h3>Latest Updates</h3>
+                 <div class="updates-list" id="updatesList">
+                     <div class="loading-updates">
+                         <div class="loading-spinner"></div>
+                         <p>Loading latest updates...</p>
+                     </div>
+                 </div>
+             </div>
+             
+             <div class="download-actions">
+                 <button class="btn btn-primary download-btn" id="downloadBtn">
+                     <i class="fas fa-download"></i>
+                     Download Shroom External
+                 </button>
+                 <p class="download-note">Join our <a href="https://discord.gg/pCV7SnRB9U" target="_blank">Discord</a> for support and updates!</p>
+             </div>
+         </div>
+     </div>
+     
+     <!-- Scripts -->
+     <script src="script.js"></script>
+ </body>
+ </html>

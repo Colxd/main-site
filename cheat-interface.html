@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shroom Cheat Interface</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        
+        .cheat-container {
+            width: 400px;
+            height: 500px;
+            background: #1a1a1a;
+            border: 2px solid #ff6b35;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .header h1 {
+            color: #ff6b35;
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 8px 16px;
+            background: #2a2a2a;
+            border: none;
+            color: #ff6b35;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            background: #ff6b35;
+            color: white;
+        }
+        
+        .tab:hover:not(.active) {
+            background: #3a3a3a;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .setting-group {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        
+        .setting-group h3 {
+            margin: 0 0 10px 0;
+            color: #ff6b35;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .checkbox {
+            width: 16px;
+            height: 16px;
+            accent-color: #ff6b35;
+        }
+        
+        .checkbox-label {
+            font-size: 12px;
+            color: #cccccc;
+        }
+        
+        .slider-group {
+            margin-bottom: 12px;
+        }
+        
+        .slider-label {
+            display: block;
+            font-size: 12px;
+            color: #cccccc;
+            margin-bottom: 5px;
+        }
+        
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .slider {
+            flex: 1;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #ff6b35;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .slider-value {
+            font-size: 11px;
+            color: #ff6b35;
+            font-weight: bold;
+            min-width: 40px;
+            text-align: right;
+        }
+        
+        .button-group {
+            margin-bottom: 12px;
+        }
+        
+        .button-label {
+            display: block;
+            font-size: 12px;
+            color: #cccccc;
+            margin-bottom: 5px;
+        }
+        
+        .button {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .button:hover {
+            background: #ff8c42;
+        }
+        
+        .dropdown {
+            background: #2a2a2a;
+            color: #cccccc;
+            border: 1px solid #333;
+            padding: 6px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            width: 100%;
+        }
+        
+        .dropdown:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+    </style>
+</head>
+<body>
+    <div class="cheat-container">
+        <div class="header">
+            <h1>Shroom</h1>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active">Aimbot</button>
+            <button class="tab">Visuals</button>
+            <button class="tab">Trigger</button>
+            <button class="tab">Exploits</button>
+            <button class="tab">Config</button>
+            <button class="tab">Misc</button>
+        </div>
+        
+        <div class="content">
+            <div class="column">
+                <div class="setting-group">
+                    <h3>Core Settings</h3>
+                    <div class="checkbox-group">
+                        <input type="checkbox" class="checkbox" id="enable">
+                        <label class="checkbox-label" for="enable">Enable Aimbot</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" class="checkbox" id="teamcheck">
+                        <label class="checkbox-label" for="teamcheck">Team Check</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" class="checkbox" id="sticky">
+                        <label class="checkbox-label" for="sticky">Sticky Aim</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" class="checkbox" id="prediction" checked>
+                        <label class="checkbox-label" for="prediction">Prediction</label>
+                    </div>
+                </div>
+                
+                <div class="setting-group">
+                    <h3>Prediction</h3>
+                    <div class="slider-group">
+                        <label class="slider-label">Prediction Factor</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" min="0" max="20" value="8" step="0.1">
+                            <span class="slider-value">8.0</span>
+                        </div>
+                    </div>
+                    <div class="slider-group">
+                        <label class="slider-label">Prediction Time</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" min="0" max="200" value="80" step="1">
+                            <span class="slider-value">80</span>
+                        </div>
+                    </div>
+                    <div class="slider-group">
+                        <label class="slider-label">Bullet Speed</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" min="0" max="5000" value="2500" step="50">
+                            <span class="slider-value">2500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="setting-group">
+                    <h3>Controls</h3>
+                    <div class="button-group">
+                        <label class="button-label">Aim Key</label>
+                        <button class="button">Mouse Right</button>
+                    </div>
+                    <div class="button-group">
+                        <label class="button-label">Key Mode</label>
+                        <select class="dropdown">
+                            <option>Hold</option>
+                            <option>Toggle</option>
+                            <option>Always</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="setting-group">
+                    <h3>Aim Settings</h3>
+                    <div class="slider-group">
+                        <label class="slider-label">Smoothness</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" min="0" max="10" value="2" step="0.1">
+                            <span class="slider-value">2.0</span>
+                        </div>
+                    </div>
+                    <div class="slider-group">
+                        <label class="slider-label">Field of View (FoV)</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" min="0" max="180" value="50" step="1">
+                            <span class="slider-value">50</span>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" class="checkbox" id="showfov">
+                        <label class="checkbox-label" for="showfov">Show FOV</label>
+                        <div style="width: 12px; height: 12px; background: #ff6b35; border-radius: 2px;"></div>
+                    </div>
+                    <div class="slider-group">
+                        <label class="slider-label">Range (Studs)</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" min="0" max="1000" value="300" step="10">
+                            <span class="slider-value">300</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Update slider values in real-time
+        document.querySelectorAll('.slider').forEach(slider => {
+            slider.addEventListener('input', function() {
+                const value = this.value;
+                const step = parseFloat(this.step);
+                const displayValue = step < 1 ? parseFloat(value).toFixed(1) : value;
+                this.nextElementSibling.textContent = displayValue;
+            });
+        });
+        
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
