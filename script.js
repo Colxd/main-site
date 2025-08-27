@@ -520,32 +520,21 @@ confirmationStyle.textContent = `
          }
      });
      
-     // Load latest updates from GitHub
-     async function loadLatestUpdates() {
-         try {
-             const response = await fetch('https://raw.githubusercontent.com/Colxd/latest-updates/refs/heads/main/updates');
-             const updatesText = await response.text();
-             
-             // Parse updates (assuming they're separated by spaces or newlines)
-             const updates = updatesText.trim().split(/\s+/).filter(update => update.length > 0);
-             
-             if (updates.length > 0) {
-                 updatesList.innerHTML = '';
-                 // Only show first 3 updates instead of all
-                 const limitedUpdates = updates.slice(0, 3);
-                 limitedUpdates.forEach(update => {
-                     const updateItem = document.createElement('div');
-                     updateItem.className = 'update-item';
-                     updateItem.textContent = update;
-                     updatesList.appendChild(updateItem);
-                 });
-             } else {
-                 updatesList.innerHTML = '<div class="update-item">No updates available at the moment.</div>';
-             }
-         } catch (error) {
-             console.error('Error loading updates:', error);
-             updatesList.innerHTML = '<div class="update-item">Failed to load updates. Please check your connection.</div>';
-         }
+     // Load latest updates
+     function loadLatestUpdates() {
+         const updates = [
+             'Config System',
+             'Better Aimbot', 
+             'New Menu'
+         ];
+         
+         updatesList.innerHTML = '';
+         updates.forEach(update => {
+             const updateItem = document.createElement('div');
+             updateItem.className = 'update-item';
+             updateItem.textContent = update;
+             updatesList.appendChild(updateItem);
+         });
      }
      
      // Handle download button click
