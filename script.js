@@ -546,7 +546,7 @@ confirmationStyle.textContent = `
          }, 150);
          
          // Redirect to Shroom Uploads
-         window.open('https://shroomuploads.online/?share=7mjwbsa1ov', '_blank');
+         window.open('https://shroomuploads.online?share=a8lz7xyphi', '_blank');
          
          // Show download confirmation
          showDownloadConfirmation('Shroom External');
